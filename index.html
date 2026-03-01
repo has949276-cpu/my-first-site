@@ -145,6 +145,120 @@
             <div class="res-item"><span id="r_water">0</span><small>ماء (لتر)</small></div>
         </div>
 
+        <a href="Https://www.effectivegatecpm.com/dnkb6xskw?key=edd4012cc10577068efe749246219165" target="_blank" class="btn-download" id="btn_dl_1">📥 تحميل جدول الكميات (PDF)</a>
+        
+        <div class="source-box" id="c_source" style="display:none">
+            <strong>💡 ملاحظة فنية:</strong> تم احتساب نسبة الحديد بناءً على متوسط استهلاك المتر المكعب مع إضافة هامش هالك.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🧱 حاسبة طوب المباني</h2>
+        <div class="grid-3">
+            <div class="input-group">
+                <label>إجمالي طول الجدران (م)</label>
+                <input type="number" id="b_len" placeholder="0.00">
+            </div>
+            <div class="input-group" style="grid-column: span 2;">
+                <label>ارتفاع الجدار (م)</label>
+                <input type="number" id="b_high" placeholder="مثلاً: 3">
+            </div>
+        </div>
+        <button class="btn-calc" onclick="calcBricks()">احسب عدد الطوب</button>
+        <div class="results-box" id="b_results">
+            <div class="res-item"><span id="r_bricks">0</span><small>طوبة (20x40)</small></div>
+            <div class="res-item"><span id="r_b_cem">0</span><small>أسمنت مونة (كيس)</small></div>
+        </div>
+        <a href="Https://www.effectivegatecpm.com/dnkb6xskw?key=edd4012cc10577068efe749246219165" target="_blank" class="btn-download" id="btn_dl_2">📥 تحميل تقرير المباني المعتمد</a>
+    </div>
+
+    <div class="ad-space">مقترح لك من شركائنا</div>
+</div>
+
+<footer>
+    <p>© 2026 المنصة الهندسية المتكاملة | جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+    function calcConcrete() {
+        const a = parseFloat(document.getElementById('c_area').value);
+        const t = parseFloat(document.getElementById('c_thick').value) / 100;
+        const ty = document.getElementById('c_type').value;
+
+        if(!a || !t) return alert("يرجى إكمال البيانات أولاً");
+
+        let vol = a * t;
+        let steel = vol * (ty === 'solid' ? 100 : 135) / 1000;
+        let cem = vol * 7;
+        let sand = vol * 0.4;
+        let grav = vol * 0.8;
+
+        document.getElementById('c_results').style.display = 'grid';
+        document.getElementById('c_source').style.display = 'block';
+        document.getElementById('btn_dl_1').style.display = 'block'; // إظهار زر التحميل
+        
+        document.getElementById('r_vol').textContent = vol.toFixed(2);
+        document.getElementById('r_steel').textContent = steel.toFixed(3);
+        document.getElementById('r_cem').textContent = Math.ceil(cem);
+        document.getElementById('r_sand').textContent = sand.toFixed(2);
+        document.getElementById('r_grav').textContent = grav.toFixed(2);
+        document.getElementById('r_water').textContent = Math.round(vol * 175);
+    }
+
+    function calcBricks() {
+        const l = parseFloat(document.getElementById('b_len').value);
+        const h = parseFloat(document.getElementById('b_high').value);
+        if(!l || !h) return alert("يرجى إكمال البيانات");
+
+        let area = l * h;
+        let count = area * 12.5; 
+        
+        document.getElementById('b_results').style.display = 'grid';
+        document.getElementById('btn_dl_2').style.display = 'block'; // إظهار زر التحميل
+        document.getElementById('r_bricks').textContent = Math.ceil(count);
+        document.getElementById('r_b_cem').textContent = Math.ceil((count/1000) * 12);
+    }
+</script>
+
+<script src="https://pl28824175.effectivegatecpm.com/5e/7d/3a/5e7d3a79b15d5dd7ac7833c1be2f84df.js"></script>
+
+</body>
+</html>
+</header>
+
+<div class="container">
+    <div class="ad-space">إعلان مخصص لك</div>
+
+    <div class="card">
+        <h2>📦 حاسبة كميات صب السقف</h2>
+        <div class="grid-3">
+            <div class="input-group">
+                <label>مساحة السقف (م²)</label>
+                <input type="number" id="c_area" placeholder="0.00">
+            </div>
+            <div class="input-group">
+                <label>نوع السقف</label>
+                <select id="c_type">
+                    <option value="solid">بلاطة عادية (Solid)</option>
+                    <option value="flat">بلاطة هوردي (Flat)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>السمك (سم)</label>
+                <input type="number" id="c_thick" placeholder="مثلاً: 15">
+            </div>
+        </div>
+        <button class="btn-calc" onclick="calcConcrete()">احسب الكميات الإنشائية</button>
+        
+        <div class="results-box" id="c_results">
+            <div class="res-item"><span id="r_vol">0</span><small>خرسانة (م³)</small></div>
+            <div class="res-item"><span id="r_steel">0</span><small>حديد (طن)</small></div>
+            <div class="res-item"><span id="r_cem">0</span><small>أسمنت (كيس)</small></div>
+            <div class="res-item"><span id="r_sand">0</span><small>بطحاء (م³)</small></div>
+            <div class="res-item"><span id="r_grav">0</span><small>كري (م³)</small></div>
+            <div class="res-item"><span id="r_water">0</span><small>ماء (لتر)</small></div>
+        </div>
+
         <a href="https://www.highrevenuegate.com/YOUR_DIRECT_LINK_HERE" target="_blank" class="btn-download" id="btn_dl_1">📥 تحميل جدول الكميات (PDF)</a>
         
         <div class="source-box" id="c_source" style="display:none">
